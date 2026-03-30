@@ -9,9 +9,9 @@ export const AOSInit = () => {
       const AOS = (await import("aos")).default;
 
       AOS.init({
-        duration: 500,
+        duration: 300,
         once: true,
-        offset: 100,
+        offset: 0,
         easing: "ease-out-cubic",
         delay: 0,
         disable: false,
