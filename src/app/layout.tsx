@@ -27,8 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`h-full antialiased`}>
       <head>
-        <title>FE AMI V2</title>
-        <meta name="description" content="AOS demo on iOS" />
+        <title>AMI&M</title>
+        <meta name="description" content="AMI&M" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
 
