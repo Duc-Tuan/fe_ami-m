@@ -1,0 +1,13 @@
+<svg class="section-deco section-deco-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1599 713"
+    fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+        d="M795.5 341.676C1281.79 341.676 1676 265.34 1676 171.176C1676 77.0112 1281.79 0.675781 795.5 0.675781C309.213 0.675781 -85 77.0112 -85 171.176C-85 265.34 309.213 341.676 795.5 341.676ZM1598 496.676H-2V712.676H1598V496.676Z"
+        fill="url(#paint0_linear_11728_50788)"></path>
+    <defs>
+        <linearGradient id="paint0_linear_11728_50788" x1="771.676" y1="0.675781" x2="771.676"
+            y2="676.868" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#373981" stop-opacity="0.1"></stop>
+            <stop offset="0.25" stop-color="#FFE1E5" stop-opacity="0"></stop>
+        </linearGradient>
+    </defs>
+</svg>

@@ -1,0 +1,30 @@
+.slogan-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hiệu ứng diagonal reveal - custom AOS */
+[data-aos="diagonal-reveal"] {
+  opacity: 0;
+  transition-property: opacity, clip-path;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  clip-path: polygon(0% 0%, 0% 0%, 0% 0%, 0% 0%);
+}
+
+[data-aos="diagonal-reveal"].aos-animate {
+  opacity: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Hoặc dùng hiệu ứng mượt mà hơn với gradient */
+[data-aos="diagonal-reveal"] {
+  opacity: 0;
+  transition: opacity 1s ease-out, clip-path 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+[data-aos="diagonal-reveal"].aos-animate {
+  opacity: 1;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

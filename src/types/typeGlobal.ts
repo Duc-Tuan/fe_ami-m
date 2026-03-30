@@ -1,0 +1,1 @@
+export type Func<T = unknown> = (data?: T) => void

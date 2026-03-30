@@ -1,27 +1,169 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+html {
+  scroll-behavior: auto;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  transition: all 0.5s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #191868;
+  --color-primary-hover: 243 80 25;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@theme {
+  /* Định nghĩa breakpoints */
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1400px;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Định nghĩa số cột */
+  --grid-columns: 12;
+  --grid-gutter: 3rem;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Container */
+  .container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: calc(var(--grid-gutter) / 2);
+
+    @media (width >= 576px) {
+      max-width: 540px;
+    }
+
+    @media (width >= 768px) {
+      max-width: 100%;
+    }
+
+    @media (width >= 992px) {
+      max-width: 960px;
+    }
+
+    @media (width >= 1200px) {
+      max-width: 1140px;
+    }
+
+    @media (width >= 1400px) {
+      max-width: 1320px;
+    }
   }
+}
+
+/* Hoặc import font local */
+@font-face {
+  font-family: "quicksand-medium";
+  src: url("../assets/fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "quicksand-regular";
+  src: url("../assets/fonts/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "quicksand-bold";
+  src: url("../assets/fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-quicksand-bold {
+  font-family: "quicksand-bold", sans-serif;
+}
+.font-quicksand-medium {
+  font-family: "quicksand-medium", sans-serif;
+}
+.font-quicksand-regular {
+  font-family: "quicksand-regular", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  display: none;
+}
+
+/* Ẩn scrollbar cho Firefox */
+* {
+  scrollbar-width: none;
+}
+
+.parallax-banner {
+  background-image: url("../assets/images/banner.png");
+  background-attachment: fixed;
+  background-position: center 5%;
+  background-repeat: no-repeat;
+  background-size: 100% 130vh;
+}
+
+@media (max-width: 430px) {
+  .parallax-banner {
+    background-attachment: scroll !important;
+  }
+}
+
+.bg-images {
+  @apply bg-cover bg-center bg-no-repeat bg-fixed w-full h-full;
+}
+
+.bg-images.imge-khoi-nguon {
+  background-image: url("../assets/images/image.png");
+}
+.bg-images.imge-khoi-nguon-mobile {
+  background-image: url("../assets/images/Imagekhoinguonmobile.png");
+}
+.custom-color-bg {
+  background: linear-gradient(92deg, #328ae2 13.28%, #ff0d39 91.27%);
+}
+
+.custom-color-bg-menu {
+  background: linear-gradient(92deg, #2F2E79 13.28%, #191868 91.27%);
+}
+
+.custom-color-text,
+.block-text-hover:hover .custom-color-text-hover {
+  /* font-family: "quicksand-bold", sans-serif;
+  background: linear-gradient(92deg, #328ae2 13.28%, #ff0d39 91.27%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; */
+
+  /* Fallback màu cho iOS nếu gradient không hoạt động */
+  color: #328ae2; /* Màu fallback */
+
+  /* Gradient text */
+  background: linear-gradient(92deg, #328ae2 13.28%, #ff0d39 91.27%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Đảm bảo hiển thị trên iOS */
+  display: inline-block; /* Quan trọng cho iOS */
+}
+
+.text-sub-menu-header {
+  background: linear-gradient(
+    217deg,
+    #ed1b2f -14.24%,
+    #ed1b2f 17.01%,
+    rgba(237, 27, 47, 0.71) 77.81%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
