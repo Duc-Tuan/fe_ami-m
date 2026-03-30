@@ -61,12 +61,12 @@ export default function RootLayout({
               },
             }}
           >
+            <AOSInit />
             <Header />
             <SmoothScroll>
               <main>{children}</main>
             </SmoothScroll>
             <Footer />
-            <AOSInit />
           </ConfigProvider>
         </div>
       </body>

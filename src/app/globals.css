@@ -113,6 +113,7 @@ html {
 @media (max-width: 430px) {
   .parallax-banner {
     background-attachment: scroll !important;
+    background-size: auto 130vh;
   }
 }
 
@@ -131,7 +132,7 @@ html {
 }
 
 .custom-color-bg-menu {
-  background: linear-gradient(92deg, #2F2E79 13.28%, #191868 91.27%);
+  background: linear-gradient(92deg, #2f2e79 13.28%, #191868 91.27%);
 }
 
 .custom-color-text,

@@ -9,14 +9,14 @@ export const AOSInit = () => {
       const AOS = (await import("aos")).default;
 
       AOS.init({
-        duration: 300,
+        duration: 500,
         once: true,
         offset: 0,
         easing: "ease-out-cubic",
         delay: 0,
         disable: false,
         startEvent: "DOMContentLoaded",
-        throttleDelay: 99,
+        throttleDelay: 0,
         mirror: false,
         anchorPlacement: "top-bottom",
       });
