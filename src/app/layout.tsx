@@ -33,17 +33,17 @@ export default function RootLayout({
       </head>
 
       <body className={`min-h-full flex flex-col`}>
-        {/* {showSplash && (
+        {showSplash && (
           <SplashScreen
             handleSplashComplete={handleSplashComplete}
             setShowAOS={setShowAOS}
           />
-        )} */}
+        )}
 
         <div
           style={{
             transition: "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
-            // opacity: !showAOS ? 1 : 0,
+            opacity: !showAOS ? 1 : 0,
           }}
           className="flex-1 flex flex-col relative"
         >
@@ -61,7 +61,7 @@ export default function RootLayout({
               },
             }}
           >
-            <AOSInit />
+            {!showAOS && <AOSInit />}
             <Header />
             <SmoothScroll>
               <main>{children}</main>
